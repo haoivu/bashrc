@@ -158,4 +158,7 @@ alias which='type -all'				# which:	Find executables
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\e[01;38;5;221m__________________________________________________________________________\n|\e[0m \e[38;5;201m\u\e[0m \e[38;5;219m\w\e[0m \e[38;5;225m[\t]\e[0m \e[38;5;214m\$(parse_git_branch)\e[0m \n\e[01;38;5;221m|\e[0m \e[01;38;5;005mλ\e[0m "
+
+#export PS1="\e[01;38;5;221m__________________________________________________________________________\n|\e[0m \e[38;5;201m\u\e[0m \e[38;5;219m\w\e[0m \e[38;5;225m[\t]\e[0m \e[38;5;214m\$(parse_git_branch)\e[0m \n\e[01;38;5;221m|\e[0m \e[01;38;5;005mλ\e[0m ${PYTHON_VIRTUALENV}"
+
+export PS1="\[\e[0m\e[38;5;220m \u\e[0m\] \[\e[38;5;214m\w\e[0m\] \[\e[38;5;208m[\t]\e[0m\] \[\e[38;5;202m\$(parse_git_branch)\e[0m\] \n \[\e[01;38;5;087m\]λ \[\e[0m\]"
