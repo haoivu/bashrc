@@ -111,9 +111,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Anaconda3 installer
-export PATH="/home/haoivu/anaconda3/bin:$PATH"
-
 #export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;93m\]\u@\h\[\033[00m\]:\[\033[00;96m\]\w \[\033[95m\][\t]\[$(tput sgr0)\]\[\033[31m\]\$(parse_git_branch)\[\033[37m\] λ "
 
 
@@ -151,6 +148,13 @@ alias which='type -all'				# which:	Find executables
 #	--------------------------------
 #	2. ENVIRONMENT CONFIGURATION
 #	--------------------------------
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+
+source ~/.local/bin/virtualenvwrapper.sh
 
 #	Change Promt
 #	-------------------------------------------------------------------------
