@@ -123,7 +123,6 @@ export PATH="/home/haoivu/anaconda3/bin:$PATH"
 #	1. MAKE TERMINAL BETTER
 #	--------------------------------
 
-alias python='python3'				# Python3
 alias cp='cp -iv'				# Preferred 'cp' implementation
 alias mv='mv -iv'				# Preferred 'mv' implementation
 alias l='ls -FGlAhp --group-directories-first'	# Preferred 'l' implementation
