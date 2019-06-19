@@ -1,3 +1,9 @@
+export EC_STORAGE=/home/haon/dev/tmp-storage
+export EC_DATA=/home/haon/dev/glados-data
+export EC_JOBS=/home/haon/dev/tmp-jobs
+export EC_LOGS=/home/haon/dev/tmp-logs
+export EC_CONFIGS=/home/haon/dev/tmp-configs
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -164,4 +170,21 @@ parse_git_branch() {
 
 #export PS1="\e[01;38;5;221m__________________________________________________________________________\n|\e[0m \e[38;5;201m\u\e[0m \e[38;5;219m\w\e[0m \e[38;5;225m[\t]\e[0m \e[38;5;214m\$(parse_git_branch)\e[0m \n\e[01;38;5;221m|\e[0m \e[01;38;5;005mλ\e[0m ${PYTHON_VIRTUALENV}"
 
-export PS1="\[\e[0m\e[38;5;220m \u\e[0m\] \[\e[38;5;214m\w\e[0m\] \[\e[38;5;208m[\t]\e[0m\] \[\e[38;5;202m\$(parse_git_branch)\e[0m\] \n \[\e[01;38;5;087m\]λ \[\e[0m\]"
+export PS1="\[\e[0m\e[38;5;220m \u\e[0m\] \[\e[38;5;214m\w\e[0m\] \[\e[38;5;208m[\t]\e[0m\] \[\e[38;5;048m\$(parse_git_branch)\e[0m\] \n \[\e[01;38;5;087m\]λ \[\e[0m\]"
+export SVGA_VGPU10=0
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/haon/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/haon/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/haon/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/haon/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
